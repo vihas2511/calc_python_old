@@ -1,0 +1,107 @@
+---
+catalog-name: cdl_ps_dev
+src-catalog-name: cdl_ps_prod
+schema-name: silver_ps_transfix_na
+rds-schema-name: bronze_rds
+h1p-db-name: silver_sap_h1p_104
+vsbltbw-schema-name: silver_ps_transvisibility
+region-schema-name: silver_sap_n6p
+
+tenant-id: 3596192b-fdf5-4e2c-a6fa-acb706c963d8 #P&G Azure Tenant
+
+storage:
+  account-name: dnproductsupplyx61f18904
+  container-name: tw-transfix-na
+  folder: tables/dev
+
+tables:
+  cust_hierarchy656_na_lkp: cust_hierarchy656_na_lkp
+  cust_na_dim: cust_na_dim
+  plant_na_dim: plant_na_dim
+  prod1_na_dim: prod1_na_dim
+  sales_org_na_dim: sales_org_na_dim
+  shipping_point_na_dim: shipping_point_na_dim
+  storage_location_na_dim: storage_location_na_dim
+  vendor_na_dim: vendor_na_dim
+  tac_technical_name_star: tac_technical_name_star
+  tfs_technical_name_star: tfs_technical_name_star
+  tac_tender_star: tac_tender_star
+  tac_tender_summary_star: tac_tender_summary_star
+  tfs_acsrl_star: tfs_acsrl_star
+  tfs_subsector_cost_star: tfs_subsector_cost_star
+  on_time_data_hub_star: on_time_data_hub_star
+  vfr_data_hub_star: vfr_data_hub_star
+  fap_star: fap_star
+  lot_star: lot_star
+  rgvr_star: rgvr_star
+  csot_star: csot_star
+  iot_star: iot_star
+  tac_shpmt_detail_star: tac_shpmt_detail_star
+  tac_lane_detail_star: tac_lane_detail_starm
+  destination_channel_customer_lkp: destination_channel_customer_lkp
+  on_time_codes_aot_reason_lkp: on_time_codes_aot_reason_lkp
+  origin_gbu_lkp: origin_gbu_lkp
+  ship_to_pgp_flag_lkp: ship_to_pgp_flag_lkp
+  vfr_load_agg_star: vfr_load_agg_star
+  weekly_network_sccrd_star: weekly_network_sccrd_star
+  weekly_network_sccrd_agg_star: weekly_network_sccrd_agg_star
+
+rds_tables:
+  cust_hier_dim: cust_hier_dim
+  exchg_rate_fct: exchg_rate_fct
+  cust_dim: cust_dim
+  trade_chanl_hier_dim: trade_chanl_hier_dim
+
+rtds-tables:
+  customer_dim: customer_dim
+  Email_adresses_lkp: Email_adresses_lkp
+  plant_dim: plant_dim
+  vltn_area_dim: vltn_area_dim
+  sales_org_dim: sales_org_dim
+  company_code_dim: company_code_dim
+  ship_point_lkp: ship_point_lkp
+  Address_dim: Address_dim
+  plant_storage_loc_to_address_lkp: plant_storage_loc_to_address_lkp
+  vendor_dim: vendor_dim
+  vendor_company_code_dim: vendor_company_code_dim
+
+silver-sap-h1p-tables:
+  ZTXXPT0104: ZTXXPT0104
+  ZTXXPT0103: ZTXXPT0103
+  ZTXXPTMELF: ZTXXPTMELF
+  ZTXXPTATVA: ZTXXPTATVA
+  MARM: MARM
+  ZTXXPTCPIK: ZTXXPTCPIK
+  CABN: CABN
+  AUSP: AUSP
+  KSSK: KSSK
+  KSML: KSML
+  KLAH: KLAH
+  ZTXX_PTWFREQ: ZTXX_PTWFREQ
+  ZTXX_PTWFCONFIG: ZTXX_PTWFCONFIG
+  ZTXXPTNASS: ZTXXPTNASS
+  MARA: MARA
+  MAKT: MAKT
+  lfa1: lfa1
+
+trans-vsblt-bw-tables:
+  operational_tariff_filter_star: operational_tariff_filter_star
+  contract_adherence_na_merged_star: contract_adherence_na_merged_star
+  tender_acceptance_na_merged_star: tender_acceptance_na_merged_star
+  freight_stats_na_merged_star: freight_stats_na_merged_star
+  otd_vfr_na_star: otd_vfr_na_star
+  on_time_arriv_shpmt_custshpmt_na_merged_star: on_time_arriv_shpmt_custshpmt_na_merged_star
+  operational_tariff_star: operational_tariff_star
+  contract_adherence_na_star: contract_adherence_na_star
+  freight_stats_na_star: freight_stats_na_star
+  leo_truck_report_lkp: leo_truck_report_lkp
+  leo_vehicle_maintenance_lkp: leo_vehicle_maintenance_lkp
+  on_time_arriv_shpmt_custshpmt_na_star: on_time_arriv_shpmt_custshpmt_na_star
+  order_shipment_linkage_zvdf_lkp: order_shipment_linkage_zvdf_lkp
+  csot_update_reason_lkp: csot_update_reason_lkp
+  sambc_master_lkp: sambc_master_lkp
+  shipping_location_na_dim: shipping_location_na_dim
+  tdcval_na_dim: tdcval_na_dim
+  tender_acceptance_na_star: tender_acceptance_na_star
+  tms_unload_method_dest_zone_lkp: tms_unload_method_dest_zone_lkp
+  transport_type_na_dim: transport_type_na_dim
